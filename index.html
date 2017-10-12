@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <script src="jspsych/jspsych.js"></script>
+  <script src="jspsych/plugins/jspsych-audio-button-response.js"></script>
+  <link rel="stylesheet" type="text/css" href="jspsych/css/jspsych.css"></link>
+</head>
+<body>
+</body>
+<script>
+
+var timeline = [];
+
+var trial = {
+  type: 'audio-button-response',
+  stimulus: 'audio/tone.mp3',
+  choices: ['img/1.gif','img/2.gif', 'img/3.gif', 'img/4.gif'],
+  button_html: '<img style="width:100px;" src="%choice%" />',
+  margin_horizontal: "20px"
+}
+timeline.push(trial);
+
+jsPsych.init({
+  timeline: timeline
+})
+
+</script>
+</html>
